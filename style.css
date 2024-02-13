@@ -1,0 +1,114 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "rubik", sans-serif;
+}
+:root{
+  --ModerateBlue: hsl(238, 40%, 52%);
+--SoftRed: hsl(358, 79%, 66%);
+--LightGrayishBlue: hsl(239, 57%, 85%);
+--PaleRed: hsl(357, 100%, 86%);
+
+--DarkBlue: hsl(212, 24%, 26%);
+--GrayishBlue: hsl(211, 10%, 45%);
+--LightGray: hsl(223, 19%, 93%);
+--VeryLightGray: hsl(228, 33%, 97%);
+--White: hsl(0, 0%, 100%);
+--br: 8px;
+}
+@font-face {
+  font-family: 'rubik';
+  src: url(https://fonts.google.com/specimen/Rubik);
+}
+html,body{
+height: 100%;
+}
+.container{
+  height: 100%;
+  background-color: var(--VeryLightGray);
+  padding: 60px 20%;
+}
+section,.sub-comment ,.comment-write{
+  padding: 20px;
+  border-radius: var(--br);
+  margin-bottom: 10px;
+  background-color: var(--White);
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  
+  gap: 20px;
+}
+.box-subcomment{
+  border-left: 2px solid var(--LightGray);
+  padding-left:30px ;
+  margin-left:30px ;
+}
+#boxBtn,.sub-comment #boxBtn{
+  height: 100%;
+  padding: 0px;
+  text-align: center;
+  border-radius: var(--br);
+  background-color: var(--VeryLightGray);
+}
+
+#btnP,#btnM,#btnReply,.btnReply{
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+  cursor: pointer;
+}
+#btnP img,#btnM img{
+
+}
+#lblN{
+  padding: 10px;
+  color: var(--ModerateBlue);
+  font-weight: 700;
+}
+
+#header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between  ;
+  height: 50px;
+  color: var(--GrayishBlue);
+}
+#header div{
+  text-size-adjust: 100%;
+  display: flex;
+  align-items: center;
+}
+#header div #userName{
+  font-weight: 700;
+  color: var(--DarkBlue);
+  margin:10px 10px;
+}
+#header #dataDoMoste{
+  font-weight: 500;
+  color: var(--GrayishBlue);
+}
+#header #fotoPerfil, .image{
+  width: 30px;
+
+}
+#header #btnReply,.btnReply{
+  color: var(--LightGrayishBlue);
+  font-weight: 700;
+  font-size: 16px;
+}
+#text{
+  font-size: 16px;
+  line-height: 18px;
+  text-align:start ;
+  font-weight: 500;
+  color: var(--GrayishBlue);
+}
+.txtMessage{
+  width: 100%;
+  padding: 5px 3px;
+  outline: none;
+  border: 2px solid var(--LightGray);
+}
+

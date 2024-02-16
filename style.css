@@ -1,35 +1,39 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "rubik", sans-serif;
 }
-:root{
-  --ModerateBlue: hsl(238, 40%, 52%);
---SoftRed: hsl(358, 79%, 66%);
---LightGrayishBlue: hsl(239, 57%, 85%);
---PaleRed: hsl(357, 100%, 86%);
 
---DarkBlue: hsl(212, 24%, 26%);
---GrayishBlue: hsl(211, 10%, 45%);
---LightGray: hsl(223, 19%, 93%);
---VeryLightGray: hsl(228, 33%, 97%);
---White: hsl(0, 0%, 100%);
---br: 8px;
+:root {
+  --ModerateBlue: hsl(238, 40%, 52%);
+  --SoftRed: hsl(358, 79%, 66%);
+  --LightGrayishBlue: hsl(239, 57%, 85%);
+  --PaleRed: hsl(357, 100%, 86%);
+
+  --DarkBlue: hsl(212, 24%, 26%);
+  --GrayishBlue: hsl(211, 10%, 45%);
+  --LightGray: hsl(223, 19%, 93%);
+  --VeryLightGray: hsl(228, 33%, 97%);
+  --White: hsl(0, 0%, 100%);
+  --br: 8px;
 }
+
 @font-face {
   font-family: 'rubik';
   src: url(https://fonts.google.com/specimen/Rubik);
 }
-html,body{
-height: 100%;
-}
-.container{
+
+
+.container {
   height: 100%;
   background-color: var(--VeryLightGray);
   padding: 60px 20%;
 }
-section,.sub-comment ,.comment-write{
+
+section,
+.sub-comment,
+.comment-write {
   padding: 20px;
   border-radius: var(--br);
   margin-bottom: 10px;
@@ -37,14 +41,14 @@ section,.sub-comment ,.comment-write{
   display: flex;
   justify-content: left;
   align-items: center;
-  
   gap: 20px;
 }
 .box-subcomment{
   border-left: 2px solid var(--LightGray);
-  padding-left:30px ;
-  margin-left:30px ;
+  padding-left: 30px;
+  margin-left: 30px;
 }
+
 #boxBtn,.sub-comment #boxBtn{
   height: 100%;
   padding: 0px;
@@ -53,15 +57,25 @@ section,.sub-comment ,.comment-write{
   background-color: var(--VeryLightGray);
 }
 
-#btnP,#btnM,#btnReply,.btnReply{
+.btn {
   border: none;
   background-color: transparent;
   padding: 10px;
   cursor: pointer;
+  transition:color .5s;
 }
-#btnP img,#btnM img{
+
+.btn:hover{
+  color: var(--LightGrayishBlue);
+}
+
+#btnP img,#btnM img {
 
 }
+.idoculto{
+  display: none;
+}
+
 #lblN{
   padding: 10px;
   color: var(--ModerateBlue);
@@ -71,44 +85,88 @@ section,.sub-comment ,.comment-write{
 #header{
   display: flex;
   align-items: center;
-  justify-content: space-between  ;
+  justify-content: space-between;
   height: 50px;
   color: var(--GrayishBlue);
 }
+
 #header div{
   text-size-adjust: 100%;
   display: flex;
   align-items: center;
 }
-#header div #userName{
+
+#header div #userName {
   font-weight: 700;
   color: var(--DarkBlue);
-  margin:10px 10px;
+  margin: 10px 10px;
 }
-#header #dataDoMoste{
+
+#header #dataDoMoste {
   font-weight: 500;
   color: var(--GrayishBlue);
 }
-#header #fotoPerfil, .image{
-  width: 30px;
 
+#fotoPerfil,
+.image {
+  width: 30px;
 }
-#header #btnReply,.btnReply{
-  color: var(--LightGrayishBlue);
+
+.reply{
+  color: var(--ModerateBlue);
   font-weight: 700;
   font-size: 16px;
+  transition:color .5s;
 }
-#text{
+.reply:hover,.back:hover{
+  color: var(--LightGrayishBlue);
+}
+
+
+#text,.txtMessage {
   font-size: 16px;
   line-height: 18px;
-  text-align:start ;
+  text-align: start;
   font-weight: 500;
   color: var(--GrayishBlue);
 }
-.txtMessage{
+
+.txtMessage {
   width: 100%;
   padding: 5px 3px;
   outline: none;
   border: 2px solid var(--LightGray);
 }
+.remetente{
+  font-weight: 700;
+  color: var(--ModerateBlue);
+}
 
+.comment-write {
+  align-items: flex-start;
+}
+
+.comment-input {
+  flex: 1;
+  width: 100%;
+}
+.txtMessage{
+  resize: none;
+}
+
+.send {
+  color: var(--White);
+  text-transform: uppercase;
+  font-weight: 900;
+  background-color: var(--ModerateBlue);
+  border-radius: var(--br);
+  padding-right: 20px;
+  padding-left: 20px;
+  transition:background-color .5s;
+  transition:color .5s;
+}
+.send:hover{
+  color: var(--White);
+  background-color: var(--LightGrayishBlue);
+
+}

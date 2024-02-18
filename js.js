@@ -231,11 +231,14 @@ fetch('data.json').then(response => response.json()).then(data => {
 
   document.addEventListener('click',(element)=>{
     if(element.target.nodeName == "BUTTON" && element.target.classList[0]== "reply"){
-      //&& element.target.classList[0] == "reply"
       let ant = document.getElementById(element.target.classList[2]);
+      if(document.querySelector('#comment-write') == undefined){
       ant.parentNode.insertBefore(inpuntCommentBox(data['currentUser'].image.png),ant.nextSibling);
-      console.log();
-      console.log('funcionando');
+      }
+      if (document.querySelector('#comment-write') != undefined) {
+        document.querySelector('#comment-write').remove();
+        ant.parentNode.insertBefore(inpuntCommentBox(data['currentUser'].image.png),ant.nextSibling);
+      }
     }
 
   
